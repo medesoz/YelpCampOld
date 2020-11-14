@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 const mongoose = require("mongoose");
-const port = 3000;
+const port = 443;
 
 mongoose.connect("mongodb+srv://Desoz:lhY5YS8n7dCN9rmY@trying.hcazn.mongodb.net/Cats?retryWrites=true&w=majority", {
     useNewUrlParser: true,
@@ -40,7 +40,7 @@ app.post("/campgrounds", function (req, res) {
     campgrounds.push(newCampground);
     res.redirect("/campgrounds");
 });
-app.listen(port, (() => {
+app.listen(port,'0.0.0.0', (() => {
     console.log("running on " + port);
 }));
 const catSchema = new mongoose.Schema({
