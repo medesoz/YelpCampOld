@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 const mongoose = require("mongoose");
-const port = 443;
+const port = 80;
 
 mongoose.connect("mongodb+srv://Desoz:lhY5YS8n7dCN9rmY@trying.hcazn.mongodb.net/Cats?retryWrites=true&w=majority", {
     useNewUrlParser: true,
