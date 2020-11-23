@@ -40,7 +40,7 @@ app.post("/campgrounds", function (req, res) {
     campgrounds.push(newCampground);
     res.redirect("/campgrounds");
 });
-app.listen(port,'0.0.0.0', (() => {
+app.listen(port, (() => {
     console.log("running on " + port);
 }));
 const catSchema = new mongoose.Schema({
